@@ -15,6 +15,7 @@ const AddProductPage: React.FC = () => {
   const navigate = useNavigate();
   const token = localStorage.getItem('token') || '';
   console.log(token)
+  
   const handleAddProduct = async (product: Product) => {
     try {
       const { data } = await addProduct(product, token);
@@ -29,11 +30,16 @@ const AddProductPage: React.FC = () => {
   };
 
   return (
-    <div>
-      <h2>Add Products</h2>
+    <div className="container mx-auto p-4">
+      <h2 className="text-2xl font-bold mb-4">Add Products</h2>
       <ProductForm onAddProduct={handleAddProduct} />
       <ProductList products={products} />
-      <button onClick={handleNext}>Next</button>
+      <button 
+        className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-300" 
+        onClick={handleNext}
+      >
+        Next
+      </button>
     </div>
   );
 };

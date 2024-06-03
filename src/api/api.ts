@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api'
+  baseURL: 'https://invoice-generate-1.onrender.com/api'
 });
 
 export const register = (data: { name: string; email: string; password: string }) => api.post('/auth/register', data);
