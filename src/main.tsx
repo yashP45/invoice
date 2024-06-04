@@ -4,8 +4,6 @@ import './index.css'
 import {
   createBrowserRouter,
   RouterProvider,
-  Route,
-  Link,
 } from "react-router-dom";
 import LoginPage from './components/LoginPage.tsx';
 import RegistrationPage from './components/RegistrationPage.tsx';
